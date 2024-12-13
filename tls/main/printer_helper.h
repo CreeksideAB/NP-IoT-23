@@ -17,14 +17,22 @@ static const char *reset = "\033[0m";
 
 #define PRINTFC_SERVER(format, ...) \
     PRINTFC(red, "Server: ");       \
-    printf(format, ##__VA_ARGS__)
+    printf(format, ##__VA_ARGS__);  \
+    printf("\n")
 
 #define PRINTFC_CLIENT(format, ...) \
     PRINTFC(blue, "Client: ");      \
-    printf(format, ##__VA_ARGS__)
+    printf(format, ##__VA_ARGS__);  \
+    printf("\n")
 
-#define PRINTFC_MAIN(format, ...) \
-    PRINTFC(yellow, "Main: ");    \
-    printf(format, ##__VA_ARGS__)
+#define PRINTFC_MAIN(format, ...)  \
+    PRINTFC(yellow, "Main: ");     \
+    printf(format, ##__VA_ARGS__); \
+    printf("\n")
+
+#define PRINTFC_WIFI_HANDLER(format, ...) \
+    PRINTFC(magenta, "WiFi Handler: ");   \
+    printf(format, ##__VA_ARGS__);        \
+    printf("\n")
 
 #endif

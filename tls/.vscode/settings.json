@@ -6,5 +6,6 @@
         "board/esp32c6-ftdi.cfg"
     ],
     "idf.portWin": "COM5",
-    "idf.toolsPathWin": "d:\\Espressif\\.espressif"
+    "idf.toolsPathWin": "d:\\Espressif\\.espressif",
+    "idf.flashType": "UART"
 }
