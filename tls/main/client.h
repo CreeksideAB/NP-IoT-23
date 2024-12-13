@@ -9,6 +9,6 @@ typedef struct client_init_param_t
     // int wifi_event_group,
 } client_init_param_t;
 
-void client_start(client_init_param_t param);
+void client_start(client_init_param_t *param);
 
 #endif

@@ -28,7 +28,7 @@ static void wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t e
     case WIFI_EVENT_STA_DISCONNECTED:
         // väldigt dålgit att printa här
         PRINTFC_WIFI_HANDLER("WiFi disconnected");
-        xEventGroupClearBits(param->wifi_event_group, WIFI_CONNECTED_BIT);
+        xEventGroupClearBits(param->wifi_event_group, WIFI_CONNECTED_BIT | WIFI_HAS_IP_BIT);
         if (reconnect_counter < WIFI_RECONNECT_MAX_ATTEMPT)
         {
             reconnect_counter++;
